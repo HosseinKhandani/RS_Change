@@ -1597,12 +1597,10 @@ with tab1:
             st.warning("⚠️ The 'Before' year is later than the 'After' year. This may lead to unexpected results.")
 
 with tab2:
-    #st.header("Before Image Analysis")
-    
     st.markdown("<h1 style='color: #667eea;'>📊 تحلیل تصویر قبل از تغییر</h1>", unsafe_allow_html=True)
     
     # کارت وضعیت
-if 'reconstructed_before_image' in st.session_state:
+    if 'reconstructed_before_image' in st.session_state:
         st.markdown("""
         <div class='stat-card success'>
             <h3>✅ وضعیت پردازش</h3>
@@ -2501,4 +2499,3 @@ with tab4: # This line is commented out as the code below is the content of tab4
             st.error(traceback.format_exc())
     else:
         st.info("After applying erosion, the interactive map will appear here.")
-
